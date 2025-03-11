@@ -10,7 +10,7 @@ dotenv.config();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const PORT = process.env.PORT || 4400;
+const PORT = process.env.PORT || 4000;
 const app = express();
 
 // set view engine 'ejs' and set path for templates
@@ -68,7 +68,7 @@ const calculateRiskScore = (data) => {
 
   // BMI
   if (data.bmi > 30) riskScore += 15;
-  else if (data.bmi > 25) riskScore += 5;
+  else if (data.bmi > 25) riskScore += 5;e
 
   // Smoking
   if (data.smoking_status === "smokes") riskScore += 20;
