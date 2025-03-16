@@ -83,9 +83,7 @@ def predict():
         # Prepare response
         result = {
             'prediction': int(prediction[0]),
-            'probability': probability_list[0],
-            'class_labels': model.classes_.tolist(),
-            'feature_importance': feature_importance
+            'probability': probability_list[0][1],
         }
         
         return jsonify(result)
